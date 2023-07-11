@@ -4,10 +4,16 @@ import (
 	"fmt"
 	"log"
 	"net/http"
+	"os"
 	"time"
 )
 
 func main() {
+	url := fmt.Sprintf("http://")
+	if err := WaitForServer(url); err != nil {
+		fmt.Fprintf(os.Stderr, "Site is down: %v\n", err)
+		os.Exit(1)
+	}
 
 }
 
