@@ -1,5 +1,10 @@
+package main
+
+import "fmt"
+
 // squares returns a fucntions that returns
 // the next square number each time it is called.
+
 func squares() func() int {
 	var x int
 	return func() int {
@@ -10,6 +15,7 @@ func squares() func() int {
 
 func main() {
 	f := squares()
+	fmt.Println(f())
 	fmt.Println(f())
 	fmt.Println(f())
 	fmt.Println(f())
