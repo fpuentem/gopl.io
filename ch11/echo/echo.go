@@ -3,6 +3,7 @@ package main
 
 import (
 	"flag"
+	"io"
 	"fmt"
 	"os"
 	"strings"
